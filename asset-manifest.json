@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/abz.agency-test/static/css/main.9ae15e70.css",
+    "main.js": "/abz.agency-test/static/js/main.d32e48c6.js",
+    "static/media/FontImmage.jpeg": "/abz.agency-test/static/media/FontImmage.a59d27ababc7742adee4.jpeg",
+    "static/media/Logo.svg": "/abz.agency-test/static/media/Logo.56bda82bd882001476c0cd3c0dd1e432.svg",
+    "index.html": "/abz.agency-test/index.html",
+    "main.9ae15e70.css.map": "/abz.agency-test/static/css/main.9ae15e70.css.map",
+    "main.d32e48c6.js.map": "/abz.agency-test/static/js/main.d32e48c6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9ae15e70.css",
+    "static/js/main.d32e48c6.js"
+  ]
+}
