@@ -1,0 +1,33 @@
+@import '../../styles/global.scss';
+@import '../../styles/variables.scss';
+
+
+$user-card-gap: 20px; 
+$padding-horizontal: 20px;
+$title-margin-top: 80px;
+$title-margin-bottom: 20px;
+$cards-margin-top: 30px;
+$cards-margin-bottom: 40px;
+
+.container {
+  padding: 0px $padding-horizontal;
+}
+
+.title {
+  margin-top: $title-margin-top;
+  margin-bottom: $title-margin-bottom;
+}
+
+.userList {
+  text-align: center;
+}
+
+.cards {
+  margin-top: $cards-margin-top;
+  margin-bottom: $cards-margin-bottom;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: $user-card-gap;
+}
+

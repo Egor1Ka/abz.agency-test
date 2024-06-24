@@ -1,0 +1,38 @@
+@import '../../styles/global.scss';
+
+// Переменные для стилей RegistrationForm
+$container-margin-top: 150px;
+$form-margin-bottom: 50px;
+$title-margin-bottom: 30px;
+$title-text-align: center;
+$button-container-display: flex;
+$button-container-justify-content: space-around;
+$error-message-color: red;
+$error-message-text-align: center;
+$error-message-display: block;
+$error-message-padding: 10px 0px;
+
+.container {
+  margin-top: $container-margin-top;
+
+  .form {
+    margin-bottom: $form-margin-bottom;
+
+    .title {
+      margin-bottom: $title-margin-bottom;
+      text-align: $title-text-align;
+    }
+
+    .buttonContainer {
+      display: $button-container-display;
+      justify-content: $button-container-justify-content;
+    }
+
+    .errorMessage {
+      color: $error-message-color;
+      text-align: $error-message-text-align;
+      display: $error-message-display;
+      padding: $error-message-padding;
+    }
+  }
+}

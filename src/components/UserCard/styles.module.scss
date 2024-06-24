@@ -1,0 +1,112 @@
+@import '../../styles/variables.scss';
+
+$user-card-background-color: #fff;
+$user-card-border-radius: 10px;
+$user-card-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+$user-card-padding: 20px;
+$user-card-text-align: center;
+$user-card-gap: 20px;
+
+$user-photo-border-radius: 50%;
+$user-photo-width: 100px;
+$user-photo-height: 100px;
+
+$user-name-font-size: 16px;
+$user-name-font-weight: bold;
+$user-name-padding: 20px 0;
+
+$user-detail-font-size: 1em;
+$user-detail-margin-bottom: 10px;
+
+$user-photo-width-medium: 80px;
+$user-photo-height-medium: 80px;
+
+$user-name-font-size-medium: 1em;
+$user-detail-font-size-medium: 0.9em;
+
+$user-photo-width-small: 60px;
+$user-photo-height-small: 60px;
+
+$user-name-font-size-small: 0.9em;
+$user-detail-font-size-small: 0.8em;
+
+$details-max-width: 250px;
+
+.card {
+  background-color: $user-card-background-color;
+  border-radius: $user-card-border-radius;
+  box-shadow: $user-card-box-shadow;
+  padding: $user-card-padding;
+  text-align: $user-card-text-align;
+  flex: 1 1 calc(33.333% - $user-card-gap);
+  width: calc(33.333% - $user-card-gap);
+}
+
+.photo {
+  border-radius: $user-photo-border-radius;
+  width: $user-photo-width;
+  height: $user-photo-height;
+  object-fit: cover;
+}
+
+.details {
+  word-wrap: break-word;
+}
+
+.name {
+  font-size: $user-name-font-size;
+  font-weight: $user-name-font-weight;
+  padding: $user-name-padding;
+}
+
+.position, .email, .phone {
+  font-size: $user-detail-font-size;
+  margin-bottom: $user-detail-margin-bottom;
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 calc(50% - $user-card-gap);
+    width: calc(50% - $user-card-gap);
+  }
+
+  .photo {
+    width: $user-photo-width-medium;
+    height: $user-photo-height-medium;
+  }
+
+  .name {
+    font-size: $user-name-font-size-medium;
+  }
+
+  .position, .email, .phone {
+    font-size: $user-detail-font-size-medium;
+  }
+}
+
+@media (max-width: 550px) {
+  .card {
+    flex: 1 1 calc(100% - $user-card-gap);
+    width: 100%;
+  }
+
+  .photo {
+    width: $user-photo-width-small;
+    height: $user-photo-height-small;
+  }
+
+  .name {
+    font-size: $user-name-font-size-small;
+  }
+
+  .position, .email, .phone {
+    font-size: $user-detail-font-size-small;
+  }
+}
+
+@media (max-width: 465px) {
+  .details {
+    max-width: $details-max-width;
+    margin: 0 auto;
+  }
+}

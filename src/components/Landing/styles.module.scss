@@ -1,0 +1,55 @@
+@import '../../styles/global.scss';
+
+
+$background-url: url('../../assets/immage/FontImmage.jpeg');
+$background-color: rgba(0, 0, 0, 0.5);
+$text-color: #fff;
+$border-radius: 10px;
+$max-width-content: 380px; 
+$h1-font-size: 40px;
+$h1-padding-bottom: 40px;
+$h1-line-height: 40px;
+
+$p-font-size: 16px;
+$p-line-height: 26px;
+$p-margin-bottom: 30px;
+
+.container {
+  background: $background-url no-repeat center center/cover;
+  height: 100vh;
+  background-color: $background-color;
+  color: $text-color;
+  text-align: center;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $background-color;
+    z-index: 1;
+  }
+
+  .content {
+    z-index: 2;
+    border-radius: $border-radius;
+    max-width: $max-width-content;
+    margin: 0 auto;
+    padding: 20px;
+  }
+}
+
+.header {
+  font-size: $h1-font-size;
+  line-height: $h1-line-height;
+  padding-bottom: $h1-padding-bottom;
+}
+
+.description {
+  font-size: $p-font-size;
+  line-height: $p-line-height;
+  margin-bottom: $p-margin-bottom;
+}

@@ -1,0 +1,144 @@
+// Переменные
+$input-border-color: #ccc;
+$input-border-radius: 4px;
+$input-padding: 10px;
+$input-font-size: 16px;
+$input-margin-bottom: 5px;
+$label-font-weight: bold;
+$label-margin-bottom: 5px;
+$helper-text-font-size: 12px;
+$helper-text-color: #666;
+$radio-label-font-size: 16px;
+$radio-label-color: #333;
+$radio-border-color: #00BDD3;
+$radio-checked-border-color: #00BDD3;
+$radio-checked-background-color: white;
+$radio-checked-before-background-color: #00BDD3;
+$file-input-border-color: #ccc;
+$file-input-border-radius: 4px;
+$file-input-font-size: 16px;
+$file-input-margin-bottom: 5px;
+$file-input-hover-border-color: #ccc;
+$file-input-label-border-color: #000;
+$file-input-label-padding: 10px 20px;
+$file-input-label-hover-background-color: #f0f0f0;
+$file-input-file-name-color: #666;
+$error-border-color: red;
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+
+  &.error .input,
+  &.error .radioCustom,
+  &.error .fileInputContainer,
+  &.error .helper-text {
+    border-color: $error-border-color;
+  }
+
+  .input {
+    border: 1px solid $input-border-color;
+    border-radius: $input-border-radius;
+    padding: $input-padding;
+    font-size: $input-font-size;
+    margin-bottom: $input-margin-bottom;
+  }
+
+  .label {
+    font-weight: $label-font-weight;
+    margin-bottom: $label-margin-bottom;
+  }
+
+  .helper-text {
+    font-size: $helper-text-font-size;
+    color: $helper-text-color;
+  }
+
+  .radioLabel {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: $radio-label-font-size;
+    color: $radio-label-color;
+    transition: color 0.3s;
+
+    .radioInput {
+      display: none;
+    }
+
+    .radioCustom {
+      width: 20px;
+      height: 20px;
+      border: 2px solid $radio-border-color;
+      border-radius: 50%;
+      margin-right: 10px;
+      position: relative;
+      transition: background-color 0.3s, border-color 0.3s;
+
+      &::before {
+        content: "";
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: background-color 0.3s;
+      }
+    }
+
+    .radioInput:checked + .radioCustom {
+      border-color: $radio-checked-border-color;
+      background-color: $radio-checked-background-color;
+    }
+
+    .radioInput:checked + .radioCustom::before {
+      background-color: $radio-checked-before-background-color;
+    }
+  }
+
+  .fileInputContainer {
+    display: flex;
+    align-items: center;
+    border: 1px solid $file-input-border-color;
+    border-radius: $file-input-border-radius;
+    padding: 0;
+    font-size: $file-input-font-size;
+    margin-bottom: $file-input-margin-bottom;
+    transition: border-color 0.3s;
+
+    .input {
+      border: none;
+    }
+    &:hover {
+      border-color: $file-input-hover-border-color;
+    }
+
+    .fileInput {
+      display: none;
+    }
+
+    .fileInputLabel {
+      cursor: pointer;
+      border: 1px solid $file-input-label-border-color;
+      padding: $file-input-label-padding;
+      border-radius: 2px 0 0 2px;
+      margin-right: 0;
+      transition: background-color 0.3s, border-color 0.3s;
+
+      &:hover {
+        background-color: $file-input-label-hover-background-color;
+      }
+    }
+
+    .fileName {
+      flex: 1;
+      padding: $input-padding;
+      color: $file-input-file-name-color;
+      border-radius: 0 $file-input-border-radius $file-input-border-radius 0;
+    }
+  }
+}
